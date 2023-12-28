@@ -40,7 +40,7 @@ project(embedded_template
         ASM # required, because the startup file is written in assembly (./embedded_template/device_stm32h723/startup_stm32h723zgtx.s)
 )
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(external/cmsis)
 
