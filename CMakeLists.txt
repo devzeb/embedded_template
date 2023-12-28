@@ -15,21 +15,18 @@ set(EMBEDDED_TEMPLATE_DEVICE STM32H723xx CACHE STRING "Device used for embedded_
 if (EMBEDDED_TEMPLATE_DEVICE STREQUAL STM32H723xx)
     add_library(flags_mcu INTERFACE)
 
-    target_compile_options(flags_mcu INTERFACE --specs=nano.specs)
-    target_link_options(flags_mcu INTERFACE --specs=nano.specs)
+    set(EMBEDDED_TEMPLATE_ARCH_FLAGS
+            --specs=nano.specs
+            --specs=nosys.specs
+            -mthumb
+            -mcpu=cortex-m7
+            -mfloat-abi=hard
+    )
 
-    target_compile_options(flags_mcu INTERFACE --specs=nosys.specs)
-    target_link_options(flags_mcu INTERFACE --specs=nosys.specs)
+    target_compile_options(flags_mcu INTERFACE ${EMBEDDED_TEMPLATE_ARCH_FLAGS})
+    target_link_options(flags_mcu INTERFACE ${EMBEDDED_TEMPLATE_ARCH_FLAGS})
 
-    target_compile_options(flags_mcu INTERFACE -mthumb)
-    target_link_options(flags_mcu INTERFACE -mthumb)
-
-    target_compile_options(flags_mcu INTERFACE -mcpu=cortex-m7)
-    target_link_options(flags_mcu INTERFACE -mcpu=cortex-m7)
-
-    target_compile_options(flags_mcu INTERFACE -mfloat-abi=hard)
-    target_link_options(flags_mcu INTERFACE -mfloat-abi=hard)
-
+    # make all following targets use the architecture specific compiler and linker flags
     link_libraries(flags_mcu)
 else ()
     message(FATAL_ERROR "Unsupported device: ${EMBEDDED_TEMPLATE_DEVICE}")
