@@ -65,5 +65,6 @@ else ()
     message(FATAL_ERROR "Unsupported device: ${EMBEDDED_TEMPLATE_DEVICE}")
 endif ()
 
-
+# all "project" specific files are located in the embedded_template subdirectory,
+# all other subdirectories are dependencies
 add_subdirectory(embedded_template)

@@ -6,7 +6,7 @@ add_executable(embedded_template
 
 target_link_libraries(embedded_template PRIVATE
         embedded_template::device
-        embedded_template::flags_compiler_linker_config
+        embedded_template::flags_compiler_linker_config # use the flags defined below
 )
 
 
