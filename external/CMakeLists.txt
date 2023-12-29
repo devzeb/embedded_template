@@ -2,6 +2,7 @@ add_subdirectory(cmsis)
 
 if (EMBEDDED_TEMPLATE_DEVICE STREQUAL STM32H723xx)
     add_subdirectory(cmsis_device_h7)
+    add_subdirectory(stm32h7xx_hal_driver)
 
     # target cmsis_device_h7 requires, that "a device is defined" using a preprocessor macro (= cmake compile definition)
     # this is, because the file external/cmsis_device_h7/cmsis_device_h7/Include/stm32h7xx.h prints an error message when
