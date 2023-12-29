@@ -4,3 +4,6 @@
 [submodule "external/cmsis/CMSIS_5"]
 	path = external/cmsis/CMSIS_5
 	url = https://github.com/ARM-software/CMSIS_5.git
+[submodule "external/stm32h7xx_hal_driver"]
+	path = external/stm32h7xx_hal_driver/stm32h7xx_hal_driver
+	url = https://github.com/STMicroelectronics/stm32h7xx_hal_driver.git
