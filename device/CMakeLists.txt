@@ -1,0 +1,5 @@
+if (EMBEDDED_TEMPLATE_DEVICE STREQUAL STM32H723xx)
+    add_subdirectory(stm32h723)
+else ()
+    message(FATAL_ERROR "Unsupported device: ${EMBEDDED_TEMPLATE_DEVICE}")
+endif ()
