@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.26)
 
+# set EMBEDDED_TEMPLATE_DEVICE in cache
+# can be overwritten by user (e.g. in cmake-gui or by editing CMakeCache.txt)
+set(EMBEDDED_TEMPLATE_DEVICE STM32H723xx CACHE STRING "Device used for embedded_template")
+
 # "toolchain" related options
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR arm)
