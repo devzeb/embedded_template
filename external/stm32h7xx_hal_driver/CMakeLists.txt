@@ -48,7 +48,7 @@ add_library(stm32h7xx_hal_driver
         stm32h7xx_hal_driver/Src/stm32h7xx_hal_mdma.c
         stm32h7xx_hal_driver/Src/stm32h7xx_hal_mmc.c
         stm32h7xx_hal_driver/Src/stm32h7xx_hal_mmc_ex.c
-        stm32h7xx_hal_driver/Src/stm32h7xx_hal_msp_template.c
+        # stm32h7xx_hal_driver/Src/stm32h7xx_hal_msp_template.c
         stm32h7xx_hal_driver/Src/stm32h7xx_hal_nand.c
         stm32h7xx_hal_driver/Src/stm32h7xx_hal_nor.c
         stm32h7xx_hal_driver/Src/stm32h7xx_hal_opamp.c
@@ -84,9 +84,9 @@ add_library(stm32h7xx_hal_driver
         stm32h7xx_hal_driver/Src/stm32h7xx_hal_swpmi.c
         stm32h7xx_hal_driver/Src/stm32h7xx_hal_tim.c
         stm32h7xx_hal_driver/Src/stm32h7xx_hal_tim_ex.c
-        stm32h7xx_hal_driver/Src/stm32h7xx_hal_timebase_rtc_alarm_template.c
-        stm32h7xx_hal_driver/Src/stm32h7xx_hal_timebase_rtc_wakeup_template.c
-        stm32h7xx_hal_driver/Src/stm32h7xx_hal_timebase_tim_template.c
+        # stm32h7xx_hal_driver/Src/stm32h7xx_hal_timebase_rtc_alarm_template.c
+        # stm32h7xx_hal_driver/Src/stm32h7xx_hal_timebase_rtc_wakeup_template.c
+        # stm32h7xx_hal_driver/Src/stm32h7xx_hal_timebase_tim_template.c
         stm32h7xx_hal_driver/Src/stm32h7xx_hal_uart.c
         stm32h7xx_hal_driver/Src/stm32h7xx_hal_uart_ex.c
         stm32h7xx_hal_driver/Src/stm32h7xx_hal_usart.c
@@ -134,4 +134,5 @@ target_include_directories(stm32h7xx_hal_driver PUBLIC
 target_link_libraries(stm32h7xx_hal_driver PUBLIC
         embedded_template::cmsis_core
         embedded_template::cmsis_device::h7
+        embedded_template::stm32h7xx_hal_driver::config
 )
