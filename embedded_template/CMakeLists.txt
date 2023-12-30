@@ -2,6 +2,8 @@
 
 add_executable(embedded_template
         main.cpp
+        gettimeofday.cpp
+        gettimeofday.h
 )
 
 target_link_libraries(embedded_template PRIVATE
