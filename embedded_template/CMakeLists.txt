@@ -2,6 +2,8 @@
 
 add_executable(embedded_template
         main.cpp
+        stm32g4xx_hal_timebase_tim.h
+        stm32g4xx_hal_timebase_tim.c
         gettimeofday.cpp
         gettimeofday.h
 )
