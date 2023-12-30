@@ -1,0 +1,6 @@
+if (EMBEDDED_TEMPLATE_DEVICE STREQUAL STM32G474xx)
+    add_subdirectory(stm32g474)
+    add_subdirectory(stm32g4xx_hal_driver_config)
+else ()
+    message(FATAL_ERROR "Unsupported device: ${EMBEDDED_TEMPLATE_DEVICE}")
+endif ()

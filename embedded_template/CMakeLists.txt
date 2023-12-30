@@ -5,6 +5,8 @@ add_executable(embedded_template
 )
 
 target_link_libraries(embedded_template PRIVATE
+        embedded_template::device
+        embedded_template::stm32g4xx_hal_driver
 )
 
 

@@ -8,6 +8,8 @@ set(CMAKE_SYSTEM_PROCESSOR arm)
 # this is required so the cmake internal test if the compiler works does not fail when using a cross-compiler
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
+set(EMBEDDED_TEMPLATE_DEVICE STM32G474xx)
+
 include(flags_architecture.cmake)
 
 # compiler specific options (e.g. CMAKE_TRY_COMPILE_TARGET_TYPE)
